@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.service.rpi.tv.switch"
+       name="rpi.tv.switch"
+       version="0.0.1"
+       provider-name="lsellens">
+  <requires>
+    <import addon="xbmc.addon" version="14.0.0"/>
+    <import addon="xbmc.python" version="2.19.0"/>
+    <import addon="script.module.RPi.GPIO" version="0.0.1"/>
+  </requires>
+  <extension point="xbmc.service"
+             library="service.py">
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">rpi tv switch.</summary>
+    <description lang="en">rpi tv switch.</description>
+    <platform>linux</platform>
+  </extension>
+</addon>
