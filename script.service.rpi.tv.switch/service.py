@@ -6,9 +6,9 @@ except RuntimeError, e:
     xbmc.log(str(e), level=xbmc.LOGERROR)
 
 # addon
-__scriptname__   = "rpi tv switch"
+__scriptname__   = "rpi.tv.switch"
 __author__       = "lsellens"
-__url__          = "http://lsellens.openelec.tv"
+__url__          = "https://github.com/lsellens/xbmc.addons"
 
 
 if __name__ == '__main__':
