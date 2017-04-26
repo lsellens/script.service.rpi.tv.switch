@@ -15,5 +15,11 @@
     <summary lang="en">rpi tv switch.</summary>
     <description lang="en">rpi tv switch.</description>
     <platform>linux</platform>
+    <license>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</license>
+    <source>https://github.com/lsellens/script.service.rpi.tv.switch</source>
+    <news>0.0.1 - initial version</news>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
   </extension>
 </addon>
