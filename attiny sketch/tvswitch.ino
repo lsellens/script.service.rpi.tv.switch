@@ -1,5 +1,3 @@
-boolean mosFet = false;
-
 void setup()
 {
   pinMode(0, INPUT); //5v from tv usb
@@ -13,14 +11,12 @@ void setup()
 
 void loop()
 {
-  if (digitalRead(3) && digitalRead(0) && !mosFet) { //if rpi gpio is low and tv is on
-    mosFet = true;
+  if (digitalRead(3) && digitalRead(0) && digitalRead(1)) { //if rpi gpio is low, tv is on, and mosfet is off
     digitalWrite(1, LOW); //turn on mosfet
   }
 
-  if (!digitalRead(3) && !digitalRead(0) && mosFet) { //if rpi gpio is pulled high and tv is off
+  if (!digitalRead(3) && !digitalRead(0) && !digitalRead(1)) { //if rpi gpio is pulled high, tv is off, and mosfet is on
     digitalWrite(4, HIGH); //set out pin to rpi high
-    mosFet = false;
     while (!digitalRead(3)) { //wait for rpi to shutdown
     }
     delay(10000);
