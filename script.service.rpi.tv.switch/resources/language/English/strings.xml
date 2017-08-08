@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<strings>
+  <string id="32000">GPIO Board Numbering</string>
+  <string id="32001">TX to switch</string>
+  <string id="32002">RX from switch</string>
+</strings>
