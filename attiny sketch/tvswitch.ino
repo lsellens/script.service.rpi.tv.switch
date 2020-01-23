@@ -11,11 +11,11 @@ void setup()
 
 void loop()
 {
-  if (digitalRead(3) && digitalRead(0) && digitalRead(1)) { //if rpi gpio is low, tv is on, and mosfet is off
+  if (!digitalRead(3) && digitalRead(0) && digitalRead(1)) { //if rpi gpio is low, tv is on, and mosfet is off
     digitalWrite(1, LOW); //turn on mosfet
   }
 
-  if (!digitalRead(3) && !digitalRead(0) && !digitalRead(1)) { //if rpi gpio is pulled high, tv is off, and mosfet is on
+  if (digitalRead(3) && !digitalRead(0) && !digitalRead(1)) { //if rpi gpio is pulled high, tv is off, and mosfet is on
     digitalWrite(4, HIGH); //set out pin to rpi high
     while (!digitalRead(3)) { //wait for rpi to shutdown
     }
